@@ -20,7 +20,6 @@ Ext.define('TodoApp.view.List', {
             {
                 xtype: 'list',
                 height: '100%',
-
                 store: {
                     fields: ['name'],
                     data: [
