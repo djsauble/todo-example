@@ -5,8 +5,10 @@ Ext.define('TodoApp.view.Edit', {
         'Ext.TitleBar',
         'Ext.form.Panel',
         'Ext.form.FieldSet',
-        'Ext.field.Radio'
+        'Ext.field.Radio',
+        'Ext.field.Hidden'
     ],
+
     config: {
         items: [
             {
@@ -32,12 +34,15 @@ Ext.define('TodoApp.view.Edit', {
                 scrollable: true,
                 items: [
                     {
+                        xtype: 'hiddenfield',
+                        name: 'id'
+                    },
+                    {
                         xtype: 'fieldset',
                         title: 'Description',
                         items: {
                             xtype: 'textfield',
-                            name: 'description',
-                            value: 'Chase the mail carrier'
+                            name: 'description'
                         }
                     },
                     {
